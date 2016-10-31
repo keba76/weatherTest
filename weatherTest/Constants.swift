@@ -8,11 +8,7 @@
 
 import Foundation
 
-let baseURL = "http://api.openweathermap.org/data/2.5/weather?"
-let latitude = "lat="
-let longitude = "&lon="
-let appID = "&appid="
-let key = "66da88b47bbce73408d0c733dc11410f"
+let currentWeatherURL = "http://api.openweathermap.org/data/2.5/weather?lat=\(Location.sharedInstance.latitude)&lon=\(Location.sharedInstance.longitude)&appid=66da88b47bbce73408d0c733dc11410f"
+let foreURL = "http://api.openweathermap.org/data/2.5/forecast/daily?lat=\(Location.sharedInstance.latitude)&lon=\(Location.sharedInstance.longitude)&cnt=10&mode=json&appid=66da88b47bbce73408d0c733dc11410f"
 
-let currentWeatherURL = "\(baseURL)\(latitude)50.5\(longitude)30.5\(appID)\(key)"
 typealias DownloadComplete = () -> ()
